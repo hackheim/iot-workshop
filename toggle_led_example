@@ -1,0 +1,13 @@
+int ledPin = D7;
+
+void setup() {
+    pinMode(ledPin, OUTPUT);
+    Particle.function("toggle", toggle);
+}
+
+void loop() {}
+
+int toggle(String command) {
+    digitalWrite(ledPin, !digitalRead(ledPin));
+    return 1;
+}
