@@ -29,18 +29,6 @@ fetch('http://api.openweathermap.org/data/2.5/weather?zip=2011,no&appid=670a9800
       degree = 105;
     }
   
-  fetch(
-    photonUrl+'setPosition', 
-    { 
-      method: 'POST', 
-      headers: {
-        'Accept': 'application/json',
-        'Content-Type': 'application/x-www-form-urlencoded'
-      },
-      body: 'arg='+0+'&access_token='+particleToken 
-    }
-  );
-  
   callback(null, {'degrees': degree});
 })
 .catch(callback);
